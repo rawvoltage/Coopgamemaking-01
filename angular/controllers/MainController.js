@@ -1,47 +1,42 @@
-app.controller('MainController', ['$scope', function($scope) {
-    $scope.title = 'Log';
-    $scope.stats = 
+app.controller('MainController', ['$scope', function($scope) { // Create "controller" for stats
+    $scope.title = 'Log'; // Title to use with the log
+    $scope.stats = // Array with an object for each stat
         [
             {
-                name: 'Health',
+                name: 'Health', 
                 main_id: 'health',
                 div_id: 'health_s',
                 span_id: 'health_add',
-                value: 460
             },
             {
                 name: 'Strength',
                 main_id: 'strength',
                 div_id: 'strength_s',
                 span_id: 'strength_add',
-                value: 1
             },
             {
                 name: 'Intellect',
                 main_id: 'intellect',
                 div_id: 'intellect_s',
                 span_id: 'intellect_add',
-                value: 1
             },
             {
                 name: 'Dexterity',
                 main_id: 'dexterity',
                 div_id: 'dexterity_s',
                 span_id: 'dexterity_add',
-                value: 1
             },
             {
                 name: 'Mastery',
                 main_id: 'mastery',
                 div_id: 'mastery_s',
                 span_id: 'mastery_add',
-                value: 1
             }
         ];
-    $scope.plus_stat = function(event, stat){
-        if(can_level_stats){
-            var click_id = (stat.target.id);
-                if(click_id == 'health_add') {
+    $scope.plus_stat = function(event, stat){ // Function to increase the stats (catching the )
+        if(can_level_stats){ // If can_level_stats is true, execute the following
+            var click_id = (stat.target.id); // Get the id of click stat, and place in click_id var
+                if(click_id == 'health_add') { // Check to see which id was clicked, and execute the corresponding code
                     health += 10;
                     stat_points -= 1;
                     check_stat_points();

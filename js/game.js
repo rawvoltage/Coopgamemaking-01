@@ -7,6 +7,7 @@ var intellect = 1;
 var dexterity = 1;
 var mastery = 1;
 
+// For the attack function
 var attack = 0;
 var damage = 0;
 
@@ -109,8 +110,8 @@ var check_stat_points = function(){
 	
 }
 
-$('#normal-attack').click(function() {
-    attack = (Math.random()*strength);
-    damage = Math.pow((attack*10), 1).toFixed();
-    $('.log ul').prepend('<li class="collection-item">' + damage + '</li>');
+$('#normal-attack').click(function() { 
+    attack = (Math.random()*strength); // Random number multiplied by your strength stat placed into attack var
+    damage = Math.pow((attack*10), 1).toFixed(); // Moving the decimal two places to the right in the result of the attack var and placing it into damage var
+    $('.log ul').prepend('<li class="collection-item">' + damage + '</li>'); // Prepending the result of damage var into a custom .log div
 });

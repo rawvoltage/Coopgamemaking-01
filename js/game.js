@@ -27,7 +27,7 @@ var passed_time = 0;
 $(document).ready(function(e) {
 	
 	// Initiate stats on screen
-   	update_stats();
+	update_stats();
 	
 	// Game Loop
 	var game_tick = setInterval(function(){

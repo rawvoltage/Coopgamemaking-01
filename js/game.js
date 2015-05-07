@@ -5,6 +5,11 @@ var health = 100;
 var strength = 1;
 var intellect = 1;
 var dexterity = 1;
+var mastery = 1;
+
+var attack = 0;
+var damage = 0;
+
 // Level control
 var level = 1;
 var experience = 0;
@@ -56,6 +61,7 @@ var update_stats = function(){
 	$("#strength").html(strength);
 	$("#intellect").html(intellect);
 	$("#dexterity").html(dexterity);
+    $("#mastery").html(mastery);
 	$("#exp").html(experience);
 	$("#exp_tnl").html(experience_tnl);
 	
@@ -97,11 +103,17 @@ var check_stat_points = function(){
 		can_level_stats = true;
 		$(".add_stat").show();
 	}else if(stat_points == 0 || stat_points > max_stat_points){
-		can_level_stats = false	
+		can_level_stats = false;	
 		$(".add_stat").hide();
 	}
 	
 }
+
+$('#normal-attack').click(function() {
+    attack = (Math.random()*strength);
+    damage = Math.pow((attack*10), 1).toFixed();
+    $('.log ul').prepend('<li class="collection-item">' + damage + '</li>');
+});
 
 /* Checks for clicks on stat upgrades */
 
@@ -111,7 +123,7 @@ $("#health_add").click(function(){
 		health += 10;
 		stat_points -= 1;
 		check_stat_points();
-	}
+	};
 });
 
 

@@ -4,7 +4,8 @@ html{
 
 /* Some spacing */
 .stat{
-	padding: 5px;	
+	padding: 5px;
+    margin: 5px;
 }
 
 /* Hiding add stat button */
@@ -22,6 +23,19 @@ html{
 h1{
 	margin-bottom: 0;
 	padding-bottom: 0;	
+}
+
+.log{
+    width: 20%;
+    margin-top: 5px;
+    margin-right: 5%;
+}
+
+.log ul li
+{
+/*    text-align: center;*/
+    padding: 0;
+    margin: 0;
 }
 
 #id-display{

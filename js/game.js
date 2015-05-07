@@ -103,9 +103,10 @@ var check_stat_points = function(){
 	if(stat_points > 0 && stat_points <= max_stat_points){
 		can_level_stats = true;
 		$(".add_stat").show();
+        $(".add_stat").removeClass('disabled');
 	}else if(stat_points == 0 || stat_points > max_stat_points){
 		can_level_stats = false;	
-		$(".add_stat").hide();
+		$(".add_stat").addClass('disabled');
 	}
 	
 }

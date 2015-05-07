@@ -47,7 +47,7 @@
             	<!-- STATS -->
             	<div id="{{stat.div_id}}" class="stat collection noselect" ng-repeat="stat in stats"> 
                     {{stat.name}}: <span id="{{stat.main_id}}"></span> 
-                    <span id="{{stat.span_id}}" class="add_stat btn" ng-click="plus_stat($scope, $event)">+</span>
+                    <span id="{{stat.span_id}}" class="add_stat btn disabled" ng-click="plus_stat($scope, $event)">+</span>
                 </div>
                 <!-- EXPERIENCE -->
                 <div id="exp_s" class="stat">

@@ -10,7 +10,6 @@ html{
 
 /* Hiding add stat button */
 .add_stat{
-	display: none;
 	padding: 5px;
 	cursor: pointer;
 }
